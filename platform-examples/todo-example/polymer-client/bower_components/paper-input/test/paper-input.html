@@ -186,7 +186,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       test('character counter is displayed', function() {
         var input = fixture('char-counter');
         forceXIfStamp(input);
-        var counter = Polymer.dom(input.root).querySelector('paper-input-char-counter')
+        var counter = Polymer.dom(input.root).querySelector('paper-input-char-counter');
         assert.ok(counter, 'paper-input-char-counter exists');
         assert.equal(counter._charCounterStr, input.value.length, 'character counter shows the value length');
       });
@@ -194,7 +194,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       test('character counter is correct for type=number', function() {
         var input = fixture('type-number-char-counter');
         forceXIfStamp(input);
-        var counter = Polymer.dom(input.root).querySelector('paper-input-char-counter')
+        var counter = Polymer.dom(input.root).querySelector('paper-input-char-counter');
         assert.ok(counter, 'paper-input-char-counter exists');
         assert.equal(counter._charCounterStr, input.value.toString().length, 'character counter shows the value length');
       });

@@ -77,6 +77,6 @@ public class DolphinPlatformSpringBootstrap implements ServletContextInitializer
     }
 
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
-        this.ctx = ctx;
+        DolphinPlatformSpringBootstrap.ctx = ctx;
     }
 }

@@ -73,10 +73,7 @@ public class ServerModelStore extends ModelStore<ServerAttribute, ServerPresenta
     }
 
     public boolean hasResponseCommands() {
-        if(currentResponse != null && !currentResponse.isEmpty()) {
-            return true;
-        }
-        return false;
+        return currentResponse != null && !currentResponse.isEmpty();
     }
 
     /**

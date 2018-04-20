@@ -106,11 +106,7 @@ public class ControllerValidator {
     }
 
     private boolean checkParameterLength(Method method) {
-        if (method.getParameterTypes().length > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return method.getParameterTypes().length > 0;
     }
 
     private boolean isDolphinActionVoid(Class<?> clazz) {

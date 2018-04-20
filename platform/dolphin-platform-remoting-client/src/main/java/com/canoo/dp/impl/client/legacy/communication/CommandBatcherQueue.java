@@ -65,4 +65,4 @@ public class CommandBatcherQueue implements DataflowQueue<List<CommandAndHandler
             queueLock.unlock();
         }
     }
-};
+}

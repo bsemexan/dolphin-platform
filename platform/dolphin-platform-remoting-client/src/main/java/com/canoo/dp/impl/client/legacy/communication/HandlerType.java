@@ -16,5 +16,5 @@
 package com.canoo.dp.impl.client.legacy.communication;
 
 public enum HandlerType {
-    UI, BACKGROUND;
+    UI, BACKGROUND
 }

@@ -57,7 +57,7 @@ public class DolphinContextTaskQueue {
     public DolphinContextTaskQueue(final String dolphinSessionId, final ClientSessionProvider sessionProvider, final CommunicationManager communicationManager, final long maxExecutionTime, final TimeUnit maxExecutionTimeUnit) {
         this.dolphinSessionId = Assert.requireNonBlank(dolphinSessionId, "dolphinSessionId");
         this.tasks = new LinkedBlockingQueue<>();
-        this.communicationManager = Assert.requireNonNull(communicationManager, "communicationManager");;
+        this.communicationManager = Assert.requireNonNull(communicationManager, "communicationManager");
         this.sessionProvider = Assert.requireNonNull(sessionProvider, "sessionProvider");
         this.maxExecutionTime = maxExecutionTime;
         this.maxExecutionTimeUnit = Assert.requireNonNull(maxExecutionTimeUnit, "maxExecutionTimeUnit");
@@ -65,7 +65,7 @@ public class DolphinContextTaskQueue {
 
     public <T> Future<T> addTask(final Callable<T> task) {
         Assert.requireNonNull(task, "task");
-        final SettableFuture<T> future = SettableFuture.<T>create();
+        final SettableFuture<T> future = SettableFuture.create();
         tasks.offer(new Runnable() {
             @Override
             public void run() {

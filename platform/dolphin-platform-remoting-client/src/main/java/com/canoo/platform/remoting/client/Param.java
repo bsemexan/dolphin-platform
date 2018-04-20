@@ -62,9 +62,7 @@ public class Param {
         Param param = (Param) o;
 
         if (!name.equals(param.name)) return false;
-        if (value != null ? !value.equals(param.value) : param.value != null) return false;
-
-        return true;
+        return value != null ? value.equals(param.value) : param.value == null;
     }
 
     @Override

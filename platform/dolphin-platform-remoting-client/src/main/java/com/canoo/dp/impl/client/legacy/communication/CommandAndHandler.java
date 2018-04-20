@@ -54,8 +54,7 @@ public class CommandAndHandler {
      */
     public boolean isBatchable() {
         if (handler != null) return false;
-        if (command instanceof EmptyCommand) return false;
-        return true;
+        return !(command instanceof EmptyCommand);
     }
 
     public Command getCommand() {

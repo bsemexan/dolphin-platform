@@ -70,7 +70,7 @@ public class PlatformBootstrap {
                 for (final Class<?> moduleClass : moduleClasses) {
                     ModuleDefinition moduleDefinition = moduleClass.getAnnotation(ModuleDefinition.class);
                     ServerModule instance = (ServerModule) moduleClass.newInstance();
-                    modules.put(moduleDefinition.value(), (ServerModule) instance);
+                    modules.put(moduleDefinition.value(), instance);
                 }
 
                 LOG.info("Found {} Dolphin Plaform modules", modules.size());

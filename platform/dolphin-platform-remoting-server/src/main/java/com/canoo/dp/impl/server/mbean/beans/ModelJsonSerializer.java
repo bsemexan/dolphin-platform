@@ -40,7 +40,7 @@ public class ModelJsonSerializer {
 
         for(Field field : ReflectionHelper.getInheritedDeclaredFields(dolphinModel.getClass())) {
             if(DolphinUtils.isProperty(field.getType())) {
-                Property property = (Property) ReflectionHelper.getPrivileged(field, dolphinModel);
+                Property property = ReflectionHelper.getPrivileged(field, dolphinModel);
                 Object value = property.get();
                 if(value == null) {
                     jsonObject.add(field.getName(), null);
@@ -54,7 +54,7 @@ public class ModelJsonSerializer {
                     jsonObject.add(field.getName(), toJson(value));
                 }
             } else if(DolphinUtils.isObservableList(field.getType())) {
-                ObservableList list = (ObservableList) ReflectionHelper.getPrivileged(field, dolphinModel);
+                ObservableList list = ReflectionHelper.getPrivileged(field, dolphinModel);
                 JsonArray jsonArray = new JsonArray();
                 for(Object value : list) {
                     if(value == null) {

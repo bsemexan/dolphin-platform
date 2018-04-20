@@ -33,10 +33,7 @@ public final class NotNullPropertyValidator implements ConstraintValidator<NotNu
     @Override
     public boolean isValid(Property value,
                            ConstraintValidatorContext context) {
-        if (value == null || value.get() == null) {
-            return false;
-        }
-        return true;
+        return value != null && value.get() != null;
     }
 
 }

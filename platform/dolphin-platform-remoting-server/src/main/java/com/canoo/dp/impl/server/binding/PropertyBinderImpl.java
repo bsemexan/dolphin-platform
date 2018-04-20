@@ -38,7 +38,7 @@ public class PropertyBinderImpl implements PropertyBinder {
                 final PropertyImpl p = (PropertyImpl) property;
 
                 final Field attributeField = ReflectionHelper.getInheritedDeclaredField(PropertyImpl.class, "attribute");
-                final ServerAttribute attribute = (ServerAttribute) ReflectionHelper.getPrivileged(attributeField, p);
+                final ServerAttribute attribute = ReflectionHelper.getPrivileged(attributeField, p);
                 if(attribute == null) {
                     throw new NullPointerException("attribute == null");
                 }

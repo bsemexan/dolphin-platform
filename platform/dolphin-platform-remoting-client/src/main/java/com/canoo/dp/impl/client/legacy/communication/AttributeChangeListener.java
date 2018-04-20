@@ -67,11 +67,7 @@ public class AttributeChangeListener implements PropertyChangeListener {
             return true;
         }
 
-        if (pmOfAttribute instanceof ClientPresentationModel && ((ClientPresentationModel) pmOfAttribute).isClientSideOnly()) {
-            return false;
-        }
-
-        return true;
+        return !(pmOfAttribute instanceof ClientPresentationModel) || !((ClientPresentationModel) pmOfAttribute).isClientSideOnly();
     }
 
 }

@@ -25,6 +25,6 @@ public class SecurityDefaultValueProvider extends ConfigurationProviderAdapter {
 
     @Override
     public Map<String, List<String>> getListProperties() {
-        return Collections.singletonMap(KeycloakConfiguration.SECURE_ENDPOINTS_PROPERTY_NAME, Collections.<String>singletonList(KeycloakConfiguration.SECURE_ENDPOINTS_PROPERTY_DEFAULT_VALUE));
+        return Collections.singletonMap(KeycloakConfiguration.SECURE_ENDPOINTS_PROPERTY_NAME, Collections.singletonList(KeycloakConfiguration.SECURE_ENDPOINTS_PROPERTY_DEFAULT_VALUE));
     }
 }

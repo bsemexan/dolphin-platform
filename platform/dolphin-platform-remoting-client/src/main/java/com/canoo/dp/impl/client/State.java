@@ -21,5 +21,5 @@ import com.canoo.platform.remoting.client.ClientContext;
  * Defines the states of the {@link ClientContext}
  */
 public enum State {
-    CREATED, INITIALIZED, DESTROYING, DESTROYED;
+    CREATED, INITIALIZED, DESTROYING, DESTROYED
 }

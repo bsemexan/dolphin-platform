@@ -42,7 +42,7 @@ public abstract class AbstractBeanBuilder implements BeanBuilder {
         this.classRepository = Assert.requireNonNull(classRepository, "classRepository");
         this.beanRepository = Assert.requireNonNull(beanRepository, "beanRepository");
         this.listMapper = listMapper;
-        this.builderFactory = Assert.requireNonNull(builderFactory, "builderFactory");;
+        this.builderFactory = Assert.requireNonNull(builderFactory, "builderFactory");
 
         dispatcher.addAddedHandler(new DolphinEventHandler() {
             @Override

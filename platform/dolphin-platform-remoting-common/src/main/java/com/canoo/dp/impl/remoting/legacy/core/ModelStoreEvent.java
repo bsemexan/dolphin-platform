@@ -37,7 +37,7 @@ public class ModelStoreEvent<A extends Attribute, P extends PresentationModel<A>
     private final P presentationModel;
 
     public enum Type {
-        ADDED, REMOVED;
+        ADDED, REMOVED
     }
 
     @Override

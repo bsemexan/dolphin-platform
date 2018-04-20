@@ -279,7 +279,7 @@ public class TestOptimizedJsonCodec {
         final List<Command> commands = OptimizedJsonCodec.getInstance().decode("[" + createCommandJsonString() + "]");
 
         assertThat(commands, hasSize(1));
-        assertThat(commands.get(0), Matchers.<Command>samePropertyValuesAs(createCommand()));
+        assertThat(commands.get(0), Matchers.samePropertyValuesAs(createCommand()));
     }
 
     @Test

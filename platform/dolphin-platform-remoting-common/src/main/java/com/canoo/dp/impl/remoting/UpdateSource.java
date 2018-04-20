@@ -16,5 +16,5 @@
 package com.canoo.dp.impl.remoting;
 
 public enum UpdateSource {
-    SELF, OTHER;
+    SELF, OTHER
 }

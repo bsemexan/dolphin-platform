@@ -36,10 +36,7 @@ public final class NullPropertyValidator implements ConstraintValidator<Null, Pr
         if (value == null) {
             return true;
         }
-        if (value.get() == null) {
-            return true;
-        }
-        return false;
+        return value.get() == null;
     }
 
 }

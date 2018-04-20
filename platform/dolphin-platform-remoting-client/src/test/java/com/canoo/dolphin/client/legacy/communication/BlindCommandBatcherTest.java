@@ -95,7 +95,7 @@ public class BlindCommandBatcherTest {
         }
 
 
-        Assert.assertEquals(4, ((ArrayList<CommandAndHandler>) list).size());
+        Assert.assertEquals(4, list.size());
         try {
             Assert.assertEquals(list.subList(0, 3), batcher.getWaitingBatches().getVal());
         } catch (InterruptedException e) {

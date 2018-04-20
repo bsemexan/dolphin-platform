@@ -60,7 +60,7 @@ public class ServerAttribute extends BaseAttribute {
 
         }
         // we may not know the pm, yet
-        for (ServerAttribute sameQualified : (List<ServerAttribute>)getPresentationModel().getModelStore().findAllAttributesByQualifier(getQualifier())) {
+        for (ServerAttribute sameQualified : getPresentationModel().getModelStore().findAllAttributesByQualifier(getQualifier())) {
             if (sameQualified.equals(this)) {
                 continue;
             }

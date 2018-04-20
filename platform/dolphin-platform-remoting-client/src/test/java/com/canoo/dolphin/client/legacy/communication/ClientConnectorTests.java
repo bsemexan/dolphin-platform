@@ -204,7 +204,7 @@ public class ClientConnectorTests {
         map.put("propertyName", "attr");
         map.put("value", "initialValue");
         map.put("qualifier", "qualifier");
-        ((ArrayList<Map<String, Object>>) attributes).add(map);
+        attributes.add(map);
         clientConnector.dispatchHandle(new CreatePresentationModelCommand("p1", "type", attributes));
         clientConnector.dispatchHandle(new CreatePresentationModelCommand("p1", "type", attributes));
     }
@@ -216,7 +216,7 @@ public class ClientConnectorTests {
         map.put("propertyName", "attr");
         map.put("value", "initialValue");
         map.put("qualifier", "qualifier");
-        ((ArrayList<Map<String, Object>>) attributes).add(map);
+        attributes.add(map);
 
         clientConnector.dispatchHandle(new CreatePresentationModelCommand("p1", "type", attributes));
         Assert.assertNotNull(clientModelStore.findPresentationModelById("p1"));
@@ -236,7 +236,7 @@ public class ClientConnectorTests {
         map.put("propertyName", "attr");
         map.put("value", "initialValue");
         map.put("qualifier", "qualifier");
-        ((ArrayList<Map<String, Object>>) attributes).add(map);
+        attributes.add(map);
         clientConnector.dispatchHandle(new CreatePresentationModelCommand("p1", "type", attributes, true));
         Assert.assertNotNull(clientModelStore.findPresentationModelById("p1"));
         Assert.assertNotNull(clientModelStore.findPresentationModelById("p1").getAttribute("attr"));
